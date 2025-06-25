@@ -35,5 +35,5 @@ def fit_shifted_inverse_with_offset(x_values, y_values):
     # [max a, max c, max d]
     popt, _ = curve_fit(hyperbola_with_translation_x_y, x_values, y_values, p0=initial_guess,
                         bounds=([0,-float('inf'),-100],
-                                 [float('inf'), min(x_values), 10]))
+                                 [float('inf'), min(x_values), 30]))
     return tuple(popt)
