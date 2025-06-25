@@ -61,9 +61,10 @@ def simulate_orbit(start_x, start_y, start_x_vel, start_y_vel, Time):
         #    
         #    poz_x_log.append(poz_x)
         #    poz_y_log.append(poz_y)
-        
-        end_x_log.append(poz_x)
-        end_y_log.append(poz_y)
+        if i % 1000 == 0:
+            
+            end_x_log.append(poz_x)
+            end_y_log.append(poz_y)
         
     return end_x_log, end_y_log
     
